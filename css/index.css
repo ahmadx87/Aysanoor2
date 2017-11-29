@@ -1,0 +1,247 @@
+@font-face {
+    font-family:"koodak";
+    src: url('koodak.ttf');
+}
+
+
+* {
+    -webkit-tap-highlight-color: rgba(0,0,0,0); /* make transparent link selection, adjust last value opacity 0 to 1.0 */
+	font-family:"koodak";
+	border: 0px;
+border-style: solid;
+
+}
+
+body {
+    -webkit-touch-callout: none;                /* prevent callout to copy image, etc when tap to hold */
+    -webkit-text-size-adjust: none;             /* prevent webkit from resizing text to fit */
+    -webkit-user-select: none;                  /* prevent copy paste, to allow, change 'none' to 'text' */
+    background-color:#FFFFFF;
+    background-image:linear-gradient(top, #CCC 0%, #FFFFFF 51%);
+    background-image:-webkit-linear-gradient(top, #CCC 0%, #FFFFFF 51%);
+    background-image:-ms-linear-gradient(top, #CCC 0%, #FFFFFF 51%);
+    background-image:-webkit-gradient(
+        linear,
+        left top,
+        left bottom,
+        color-stop(0, #CCC),
+        color-stop(0.51, #FFFFFF)
+    );
+    background-attachment:fixed;
+    font-size:1em;
+    height:100%;
+    margin:0px;
+    padding:0px;
+    width:100%;
+	overflow: hidden;
+}
+
+
+h1 {
+    font-size:24px;
+    font-weight:normal;
+    margin:0px;
+    overflow:visible;
+    padding:0px;
+    text-align:center;
+}
+
+/* header */
+.ui-header > .ui-btn {
+    padding: 7px 10px 7px;
+    background:none;
+    border:none;
+    /*overflow:;*/
+}
+.ui-header .ui-title{
+
+margin: 0.5em 0em .5em;
+
+}
+
+/* home page */
+
+#logo{
+    width:70%;
+    max-width:206px;
+    margin:35px 0 40px;
+}
+.centerText{
+    text-align:center;
+}
+
+#home-page a{
+    margin-top:20px;
+    padding-top:8px;
+    padding-bottom:8px;
+}
+
+.ui-grid-a .ui-block-a .ui-btn{
+    margin-left: 0px;
+}
+
+.ui-grid-a .ui-block-b .ui-btn{
+    margin-right: 0px;
+}
+
+/* map */
+#second-page{
+   
+}
+.big-text{
+    font-size: 1.3em;
+}
+.small-text{
+    font-size:0.8em;
+}
+
+
+.ui-btn-active {
+    border: 1px solid       #1abc9c /*{global-active-border}*/;
+    background:             #1abc9c /*{global-active-background-color}*/;
+    font-weight: bold;
+    color:                  #ffffff /*{global-active-color}*/;
+    cursor: pointer;
+    text-decoration: none;
+  font-family: Lato, sans-serif
+}
+
+
+.ui-icon-ms-phone {
+    background: url("../img/phone-icon.png") 50% 50% no-repeat;
+}
+.ui-icon-ms-question {
+    background: url("../img/question-icon.png") 50% 50% no-repeat;
+}
+.ui-icon-ms-search {
+    background: url("../img/search-icon.png") 50% 50% no-repeat;
+}
+
+.settingsMenu{
+	display: inline;
+	vertical-align: middle;
+	width: 2.4em ;
+	height: 2.4em ;
+
+}
+
+.settingsMenu:active{
+	opacity: 0.5;
+}
+
+.ui-header{
+line-height:1em;
+	margin: auto;
+	padding:0em 0.5em;
+	border:none;
+	font-size:1em;
+}
+
+.silderDiv{
+width:100%;
+line-height:1em;
+text-align:center;
+border:0px 0px;
+margin:auto;
+}
+
+.SliderTitle{
+	display:block;
+	direction:rtl;
+	text-align:right;
+	padding: 0em 1em;
+	font-family:"koodak";
+	border:0px 0px;
+	font-size: 1.1em;
+	line-height: 1em;
+	margin:0.5em 0em;
+}
+#sliderVal{
+	display:inline;
+	direction:rtl;
+	text-align:right;
+	padding: 0em 0.5em;
+	font-family:"koodak";
+	border:0px 0px;
+	font-size:1.2em;
+	color:#00328A;
+}
+
+.ui-slider-track {
+    height: 1em;
+	background: #555;
+}
+.ui-slider-handle {
+    height: 10px;
+    top: 80%;
+}
+
+ /* hide input for slider */
+.ui-mobile .ui-page .ui-slider-input,
+.ui-mobile .ui-dialog .ui-slider-input {
+    display : none;
+}
+
+div.ui-slider-track {
+    margin: 0 15px 0 15px !important;
+}
+
+#colorPickerDiv{
+
+margin: auto;
+}
+
+#colorPickerInput{
+width: 500px;
+height: 500px;
+}
+
+.picker{
+	width: 100%;
+	height: 100%;
+}
+
+/*html .ui-page-theme-a .ui-slider-track .ui-btn-active,html .ui-bar-a .ui-slider-track .ui-btn-active,html .ui-body-a .ui-slider-track .ui-btn-active,html body .ui-group-theme-a .ui-slider-track .ui-btn-active,html body div.ui-slider-track.ui-body-a .ui-btn-active{background-color:#1abc9c;border-color:#4e6d8d;color:#fff}
+ */
+ 
+ #testt .ui-btn-active{background-color:#ffbd19;border-color:#4e6d8d;color:#fff}
+
+ #colorPickerRGBValue{
+ 	 position: relative;
+ }
+ 
+ #RGBTable{
+	 position: absolute;
+	 top: 0em;
+	float: left;
+	
+ }
+ 
+ .colorLetterCell{
+ font-size: .7em;
+ font-weight: bold;
+ color: #FFF;
+ border: 1px;
+border-style: solid;
+border-color: #000;
+margin: 0px;
+ }
+ 
+.colorCodeCell{
+ font-size: .7em;
+ color: #FFF;
+ border: 1px;
+border-style: solid;
+border-color: #000;
+margin: 0px;
+ }
+ 
+
+ 
+ #colorSliderRWraper .ui-btn-active{background-color:#f00;border-color:#4e6d8d;color:#fff}
+  #colorSliderGWraper .ui-btn-active{background-color:#0f0;border-color:#4e6d8d;color:#fff}
+   #colorSliderBWraper .ui-btn-active{background-color:#00f;border-color:#4e6d8d;color:#fff}
+
+ #colorSliderRWraper  .ui-slider-track .ui-btn.ui-slider-handle{background-color:#A00}
+ #colorSliderGWraper  .ui-slider-track .ui-btn.ui-slider-handle{background-color:#0A0}
+ #colorSliderBWraper  .ui-slider-track .ui-btn.ui-slider-handle{background-color:#00A}

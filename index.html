@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, target-densitydpi=medium-dpi" />
+
+        <link rel="stylesheet"  href="libs/jQM-flat/jquery.mobile.flatui.css">
+        <link type="text/css" rel="stylesheet" href="css/wheelcolorpicker.css" />
+		<link rel="stylesheet" type="text/css" href="css/index.css" />	
+		
+		<script type="text/javascript" src="libs/fastclick.min.js"></script>
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="libs/jquery-2.0.3.min.js"></script>
+		<script src="libs/jquery-ui.min.js"></script>
+        <script type="text/javascript" src="libs/jQueryMobile/jquery.mobile-1.4.5.js"></script>
+		   
+		    <script type="text/javascript" src="js/jquery.wheelcolorpicker.js"></script>
+		    
+			<script src="js/JavaScript.js"></script>
+   
+
+
+
+        <title>AYSANOOR Smart WiFi Controller</title>
+    </head>
+    <body>
+        <div id="app">           
+            <div  id="solidColor" data-role="page">
+                <div data-role="header" data-id="header" data-position="fixed" class="ui-header" data-theme="a">    
+					<a href="#settingsPage" ><img class="settingsMenu" src="img/settingsicon.png" alt="settings icon" ></a>
+                    <h1>AYSANOOR</h1>
+                </div> 
+                <div data-role="content"  style="overflow: hidden; height:100%">
+				
+				<div class="silderDiv">
+                <p class="SliderTitle">روشنایی: <span class="sliderVal brightnessVal"></span></p>
+                <!-- not required? : <label for="brightnessSlider" class="ui-hidden-accessible">Slider:</label>  -->
+				<div id="testt">
+                <input id="brightnessSlider" style="width:100%;" type="range" name="brightnessSlider" min="0" max="100" data-highlight="true"/>
+				</div>
+			</div>
+</br>
+</br>
+			<div id="colorPickerDivWraper">
+			
+			
+	      	<!-- link for RGB popup -->
+
+<div data-role="popup" id="popupRGBDialog" data-overlay-theme="a" data-theme="a" style="max-width:400px;" class="ui-corner-all">
+			<div data-role="content" data-theme="a" class="ui-corner-bottom ui-content">
+			<div id="colorSliderRWraper">
+			<label for="colorSliderR">Input slider:</label>
+<input id="colorSliderR" style="width:100%;" type="range" name="colorSliderR" min="0" max="255" data-highlight="true"/>
+</div>
+<div id="colorSliderGWraper">
+<input id="colorSliderG" style="width:100%;" type="range" name="colorSliderG" min="0" max="255" data-highlight="true"/>
+</div>
+<div id="colorSliderBWraper">
+<input id="colorSliderB" style="width:100%;" type="range" name="colorSliderB" min="0" max="255" data-highlight="true"/>
+</div>
+				<a href="#" data-role="button" data-inline="true" data-rel="back" data-theme="c">Cancel</a>    
+				<a href="#" data-role="button" data-inline="true" data-rel="back" data-transition="flow" data-theme="b">Delete</a>  
+			</div>
+		</div>
+			
+			
+			
+			<div id="colorPickerRGBValue">
+			<table id="RGBTable" cellspacing="0">
+			<tr>
+			<td class="colorLetterCell" style="background:#A00;">R</td>
+			<td class="colorCodeCell" style="background:#F00;" id="RValueHTML"> 255 </td>
+			</tr>
+			
+			<tr>
+			<td class="colorLetterCell" style="background:#0A0;">G</td>
+			<td class="colorCodeCell" style="background:#0F0;" id="GValueHTML"> 255 </td>
+			</tr>
+			
+			<tr>
+			<td class="colorLetterCell" style="background:#00A;">B</td>
+			<td class="colorCodeCell" style="background:#00F;" id="BValueHTML"> 255 </td>
+			</tr>
+			
+			</table>
+			</div>
+
+
+			<div id="colorPickerDiv" data-role="none">
+			<input type="text" id="colorPickerInput"  data-wcp-cssClass="picker" data-role="none" >
+            </div>
+			</div>
+			
+			
+			
+                </div>
+                <div id="footer" data-role="footer" data-id="footer" data-position="fixed" data-tap-toggle="false" data-theme="a">
+                    <div id="navbar1" data-role="navbar">
+                        <ul>
+                            <li><a id="map-button" href="#solidColor" data-icon="flat-location"  class="ui-state-persist" data-theme="a">Solid</a></li>
+                            <li><a id="list-button" href="#Animation" data-icon="flat-menu">Anim</a></li>
+                            <li><a id="search-button" href="#AnimationList" data-icon="ms-search">Multi</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+       
+	   
+	   <div  id="Animation" data-role="page">
+	   <div data-role="header" data-id="header" data-position="fixed" class="ui-header" data-theme="a">    
+					<a href="#settingsPage" ><img class="settingsMenu" src="img/settingsicon.png" alt="settings icon" ></a>
+                    <h1>AYSANOOR</h1>
+                </div>
+                <div data-role="content" >
+				
+		
+			
+                </div>
+                <div  data-role="footer" data-id="footer" data-position="fixed" data-tap-toggle="false" data-theme="a">
+                    <div id="navbar2" data-role="navbar">
+                        <ul>
+                            <li><a  href="#solidColor" data-icon="flat-location">Solid</a></li>
+                            <li><a  href="#Animation" data-icon="flat-menu"  class="ui-state-persist" data-theme="a">Anim</a></li>
+                            <li><a  href="#AnimationList" data-icon="ms-search">Multi</a></li>
+                        </ul>
+                    </div>
+                </div>
+	   </div>
+	   
+	   
+	   <div  id="AnimationList" data-role="page">
+	   <div data-role="header" data-id="header"  data-position="fixed" class="ui-header" data-theme="a">    
+					<a href="#settingsPage" ><img class="settingsMenu" src="img/settingsicon.png" alt="settings icon" ></a>
+                    <h1>AYSANOOR</h1>
+                </div>
+                <div data-role="content" >
+				
+			
+                </div>
+                <div  data-role="footer" data-id="footer" data-position="fixed" data-tap-toggle="false" data-theme="a">
+                    <div id="navbar3" data-role="navbar">
+                        <ul>
+                            <li><a  href="#solidColor" data-icon="flat-location">Solid</a></li>
+                            <li><a  href="#Animation" data-icon="flat-menu">Anim</a></li>
+                            <li><a  href="#AnimationList" data-icon="ms-search"  class="ui-state-persist" data-theme="a">Multi</a></li>
+                        </ul>
+                    </div>
+                </div>
+	   </div>
+	   
+	   
+        </div>
+
+
+        
+    </body>
+</html>
